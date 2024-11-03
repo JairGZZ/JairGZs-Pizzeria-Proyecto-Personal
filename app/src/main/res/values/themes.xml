@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.JairGZsPizzeria" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.JairGZsPizzeria" parent="Base.Theme.JairGZsPizzeria">
+
+    </style>
+
+<style name="Theme.hola" parent="Theme.SplashScreen">
+    <item name="windowSplashScreenBackground">#E0A30D</item>
+    <item name="windowSplashScreenAnimatedIcon">@drawable/logo_animado</item>
+
+    <item name="android:windowSplashScreenAnimationDuration">60000</item>
+
+    <item name="postSplashScreenTheme">@style/Theme.JairGZsPizzeria</item>
+    <item name="android:windowSplashScreenBrandingImage">@drawable/logo_jairgzs_pizzeria</item>
+</style>
+</resources>

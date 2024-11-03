@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1046331910814",
+    "project_id": "jairgz-s-pizzeria",
+    "storage_bucket": "jairgz-s-pizzeria.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046331910814:android:ec013eba9e7d31fa00298f",
+        "android_client_info": {
+          "package_name": "com.jair.jairgzspizzeria"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMTFTcXU5hCj4pkH4zULeNJBzeN4CDRrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

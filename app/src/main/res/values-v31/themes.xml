@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.hola" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#E0A30D</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_animado</item>
+        <item name="android:windowSplashScreenAnimationDuration">1000</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.JairGZsPizzeria</item>
+
+    </style>
+</resources>

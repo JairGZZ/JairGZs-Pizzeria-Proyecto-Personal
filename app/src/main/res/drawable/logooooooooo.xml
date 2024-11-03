@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <group>
+        <path
+            android:name="circle"
+            android:fillColor="#FF5722"
+            android:pathData="M50,10 A40,40 0 1,1 49.9,10 Z"/>
+    </group>
+</vector>
