@@ -9,15 +9,22 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.jair.jairgzspizzeria.adapter.PizzaAdapter
+import com.jair.jairgzspizzeria.api.Pizza
 import com.jair.jairgzspizzeria.databinding.HomeActivityBinding
-import com.jair.jairgzspizzeria.model.PizzaModel
+import com.jair.jairgzspizzeria.domain.GetPizzaUseCase
+import com.jair.jairgzspizzeria.network.PizzaService
 import com.jair.jairgzspizzeria.viewmodels.LoginViewModel
+import kotlinx.coroutines.launch
 
 class HomeActivity :AppCompatActivity(){
     private lateinit var binding: HomeActivityBinding
+    private val pizzaService = PizzaService()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,23 +33,14 @@ class HomeActivity :AppCompatActivity(){
         setContentView(binding.root)
 
 
-        val listaPizza = PizzaModel(
-            "Hola",
-            R.drawable.pizza_chorizo
-        )
-        val listaPizza2 = PizzaModel(
-            "Pizza Continental",
-            R.drawable.pizza_continental
-        )
-
-        val lista = listOf(listaPizza,listaPizza2)
 
 
-        val adapter = PizzaAdapter(lista)
+        binding.recyclerPizza.layoutManager = LinearLayoutManager(this)
 
-        binding.recyclerPizza.adapter = adapter
-        binding.recyclerPizza.layoutManager = GridLayoutManager(this,1)
-
+        lifecycleScope.launch {
+            val pizzaList: List<Pizza> = pizzaService.getPizzas()
+            binding.recyclerPizza.adapter = PizzaAdapter(pizzaList)
+        }
 
 
 

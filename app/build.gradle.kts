@@ -57,12 +57,21 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
     implementation("com.google.firebase:firebase-auth")
 
-
+//splashscreen libreria
     implementation("androidx.core:core-splashscreen:1.0.1")
         // ViewModel
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
         // LiveData
         implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
+// corrutinas
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+
+    implementation("com.github.bumptech.glide:glide:5.0.0-rc01")
+
+
+
+    implementation(libs.squareup.retrofit)
+    implementation(libs.squareup.retrofit.converter)
 
 
 

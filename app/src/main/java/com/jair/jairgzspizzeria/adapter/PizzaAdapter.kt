@@ -3,10 +3,10 @@ package com.jair.jairgzspizzeria.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.jair.jairgzspizzeria.model.PizzaModel
+import com.jair.jairgzspizzeria.api.Pizza
 import com.jair.jairgzspizzeria.viewholder.PizzaViewHolder
 
-class PizzaAdapter(  val listPizza: List<PizzaModel>): RecyclerView.Adapter<PizzaViewHolder>() {
+class PizzaAdapter(  val listPizza: List<Pizza>): RecyclerView.Adapter<PizzaViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PizzaViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         return PizzaViewHolder(inflater,parent)
@@ -19,7 +19,9 @@ class PizzaAdapter(  val listPizza: List<PizzaModel>): RecyclerView.Adapter<Pizz
 
     override fun onBindViewHolder(holder: PizzaViewHolder, position: Int) {
         val pizza = listPizza[position]
-        holder.bind(pizza)
+        if (pizza != null) {
+            holder.bind(pizza)
+        }
     }
 
 
