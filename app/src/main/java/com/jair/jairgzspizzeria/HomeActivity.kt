@@ -1,20 +1,12 @@
 package com.jair.jairgzspizzeria
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.jair.jairgzspizzeria.adapter.PizzaAdapter
 import com.jair.jairgzspizzeria.databinding.HomeActivityBinding
 import com.jair.jairgzspizzeria.model.PizzaModel
-import com.jair.jairgzspizzeria.viewmodels.LoginViewModel
 
 class HomeActivity :AppCompatActivity(){
     private lateinit var binding: HomeActivityBinding
@@ -34,8 +26,10 @@ class HomeActivity :AppCompatActivity(){
             "Pizza Continental",
             R.drawable.pizza_continental
         )
+        val listaPizza3 = PizzaModel("Pizza Vegetariana",R.drawable.pizza_mozzarella)
 
-        val lista = listOf(listaPizza,listaPizza2)
+
+        val lista = listOf(listaPizza,listaPizza2,listaPizza3)
 
 
         val adapter = PizzaAdapter(lista)

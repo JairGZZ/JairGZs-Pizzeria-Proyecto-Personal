@@ -10,6 +10,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.jair.jairgzspizzeria.databinding.ActivityLoginBinding
+import com.jair.jairgzspizzeria.ui.home.HomeFragment
 import com.jair.jairgzspizzeria.viewmodels.LoginViewModel
 
 class LoginActivity:AppCompatActivity() {
@@ -33,7 +34,7 @@ class LoginActivity:AppCompatActivity() {
         }
         loginViewModel.userLoginFirebase.observe(this) { success ->
             if(success) {
-                startActivity(Intent(this, HomeActivity::class.java))
+                startActivity(Intent(this, Navigation::class.java))
             } else {
                 Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
             }

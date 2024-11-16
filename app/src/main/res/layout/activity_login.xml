@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:id="@+id/login"
@@ -14,25 +15,51 @@
         android:src="@drawable/logo_jairgzs_pizzeria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:hintEnabled="false"
+        app:boxStrokeColor="@color/black"
+        android:layout_width="match_parent"
+        app:cursorColor="@color/black"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+
+        >
     <com.google.android.material.textfield.TextInputEditText
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
         android:layout_height="wrap_content"
         android:hint="Correo"
         android:id="@+id/etCorreo"
         />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:hintEnabled="false"
+        app:boxStrokeColor="@color/black"
+        android:layout_width="match_parent"
+        app:cursorColor="@color/black"
+        android:layout_height="60dp"
+        app:passwordToggleEnabled="true">
     <com.google.android.material.textfield.TextInputEditText
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+
         android:layout_marginEnd="20dp"
         android:layout_width="match_parent"
+        android:inputType="textPassword"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
         android:id="@+id/etContrasena"
 
         />
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/btnIngresar"
         android:layout_marginTop="20dp"
@@ -40,6 +67,15 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#8B5B29"
         android:text="Ingresar"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btnCrearCuenta"
+        android:layout_marginTop="5dp"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#8B5B38"
+        android:text="Crear Cuenta"
         android:layout_gravity="center"/>
 
 
